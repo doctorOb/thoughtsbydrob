@@ -1,0 +1,383 @@
+html {
+	background: url("patterns/squairy_light.png");
+}
+
+time {
+	color: #666665;
+	font-family: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+	letter-spacing: -0.02em;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.thin-font {
+	font: 400 50px/52px "freight-sans-pro", Helvetica, Arial, Sans-Serif;
+}
+
+p, span.thought{
+	line-height: 1.635em;
+	margin: .7em 0 1em 0;
+	/*font-family: ff-meta-serif-web-pro, Georgia, Cambria, 'Times New Roman', Times, serif;*/
+	font-family: 'proxima-nova','Helvetica','Avenir','Arial',sans-serif;
+	font-size: 1.3em;
+	color: #333;
+	-webkit-font-smoothing: antialiased;
+	position: relative;
+}
+
+#container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	-webkit-transition: margin .3s ease,-webkit-transform .3s ease;
+	-moz-transition: margin .3s ease,-moz-transform .3s ease;
+	-o-transition: margin .3s ease,transform .3s ease;
+	-ms-transition: margin .3s ease,transform .3s ease;
+	transition: margin .3s ease,transform .3s ease;
+}
+
+#container.pushed {
+		margin-left: 15em;
+	-webkit-transition: margin .3s ease,-webkit-transform .3s ease;
+	transition: margin .3s ease,transform .3s ease;
+}
+
+.splash.container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	float: left; /*idk why*/
+	background-color: white; /* placeholder while the image loads */
+	/*display: -webkit-box;*/
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	-webkit-box-orient: vertical;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	background: url('patterns/tree.jpg');
+	background-attachment: fixed;
+}
+
+div.top.banner {
+	font-family: acta-display, Georgia, Times, serif;
+	margin: 0 auto;
+	-webkit-font-smoothing: antialiased;
+	width: 50%;
+	position: relative;
+	top: 30%;
+}
+
+.about {
+	position: relative;
+	width: 80%;
+	margin: 0 auto;
+	top: 35%;
+}
+
+.about > p {
+	font-size: 1.5em;
+	color: rgba(60, 60, 60, 0.88);
+	font-style: italic;
+}
+
+
+div.main.container {
+	background: rgba(255, 255, 255, 0.43);
+}
+
+/****************************
+
+	Styles for the SideMenu component
+	and any subsequent menu items.
+
+	Also contains styles for the left sticky
+	button that summons it
+
+*/
+
+	.side-menu {
+		width: 15em;
+		margin-left: -15em;
+		background-color: rgba(245, 215, 119, 0.46);
+		position: fixed;
+		left: 0;
+		top: 0;
+		height: 100%;
+		-webkit-transition: margin-left .3s ease,margin-top .3s ease;
+		transition: margin-left .3s ease,margin-top .3s ease;
+	}
+
+	.left.sticky.navbutton {
+		position: fixed;
+		top: 1.1em;
+		z-index: 100;
+		padding: 1em;
+		background-color: rgba(245, 215, 119, 0.46);
+		border: 1px dotted rgba(238, 238, 205, 0.43);
+		border-radius: 0px 10px 10px 0px;
+	}
+
+	.left.sticky.navbutton:hover {
+		cursor: hand;
+		background-color: rgba(235, 187, 33, 1);
+	}
+
+	.side-menu.active {
+		margin-left:0;
+	}
+
+	.folder {
+		font-family: acta-display, Georgia, Times, serif;
+		font-family: "freight-sans-pro", Helvetica, Arial, Sans-Serif;
+		text-align: center;
+		background: rgba(255, 255, 255, 0.25);
+	}
+
+	.folder .item {
+		padding: .5em;
+		border-bottom: 1px dotted gray;
+	}
+
+	.folder .item:hover {
+		background: white;
+	}
+
+	.folder .item > a {
+		text-decoration: none;
+		color: rgb(119, 119, 119);
+		/*font: 400 16px/20px "freight-sans-pro", Helvetica, Arial, Sans-Serif;*/
+		font: "proxima-nova", "Helvetica Neue", Helvetica, arial, sans-serif;
+		font-size: 1em;
+		font-weight: 100;
+		letter-spacing: 0.3em;
+		text-transform: uppercase;
+		display: block;
+		width: 100%;
+	}
+
+	.folder .header {
+		padding: 1em;
+		font-size: 1.5em;
+		font: 400 20px/26px "freight-sans-pro", Helvetica, Arial, Sans-Serif;
+		text-transform: uppercase;
+		background: rgba(235, 187, 33, 1);
+	}
+
+
+/********************************
+	Headers styles. Includes styles
+	for the SubHeader component
+*/
+
+	h2 i {
+		float: left !important;
+		color: rgb(189, 93, 93) !important;
+	}
+
+	h2.title {
+		/*font-family: acta-display, Georgia, Times, serif;*/
+		font-family:"freight-sans-pro", Helvetica, Arial, Sans-Serif;
+		font-size: 3em;
+		color: #333;
+		font-weight: normal;
+		text-align: center;
+	}
+
+	h2.header {
+		color: rgb(82, 77, 77) !important;
+		font-family: "freight-sans-pro", Helvetica, Arial, Sans-Serif !important;
+		font-weight: 400;
+		font-size: 1.7em;
+		margin-bottom: 20px;
+		margin-top: 40px;
+	}
+
+	.title-wrapper {
+		display: inline-block;
+		width: 100%;
+	}
+
+	.title-wrapper h2.title {
+		margin: 0;
+		padding: 1em;
+		background-color: rgba(243, 184, 95, 0.54);
+	}
+
+
+
+
+div.quote {
+	padding-left: 15px;
+}
+
+	div.quote > p {
+		font-style: italic;
+		color: #747171;
+	}
+
+div.outer {
+	clear: both;
+	padding-bottom: 30px;
+	margin-bottom: 100px;
+}
+
+	div.outer.shadow {
+		-webkit-box-shadow: 0px 5px 9px 0px rgba(50, 50, 50, 0.63);
+		-moz-box-shadow:    0px 5px 9px 0px rgba(50, 50, 50, 0.63);
+		box-shadow:         0px 5px 9px 0px rgba(50, 50, 50, 0.63);
+	}
+
+	div.outer h2 {
+		padding-top: 1em;
+		padding-bottom: 0px;
+		margin: 0;
+	}
+
+	div.outer:last {
+		-webkit-box-shadow: none;
+		-moz-box-shadow:    none;
+		box-shadow:         none;
+	}
+.embed.unloaded {
+	width: 100%;
+	height: 30px;
+	background: white;
+}
+
+.italic {
+	font-style: italic;
+	color: rgb(119, 118, 117);
+}
+
+.emphasis {
+	color: rgb(189, 93, 93);
+}
+
+.hugging {
+	margin-top: -3%;
+}
+
+.inline.aside {
+	margin: 0 auto;
+	width: 80%;
+	font-size: 2em;
+	color: #333;
+}
+
+p > a {
+	color: #cf8b5e;
+	text-decoration: none;
+	border-bottom: 1px dotted #cf8b5e;
+}
+
+p > a:hover{
+	color: orange;
+	border-bottom: 1px dotted orange;
+}
+
+p > a.tooltip:before {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-top: 20px solid rgb(236, 210, 162);
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	opacity: 0;
+	bottom: 92%;
+}
+
+p > a.tooltip:after {
+	content: attr(data-tooltip);
+	position: absolute;
+	bottom: 92%;
+	left: 20%;
+	width: 50%;
+	background: rgb(236, 210, 162);
+	padding: 5px 15px;
+	color: black;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	opacity: 0;
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+}
+
+p > a.tooltip:hover:before, p > a.tooltip:hover:after {
+	opacity: 1;
+}
+
+p > a.tooltip:hover:after {
+	bottom: 99%;
+}
+
+p > a.tooltip:hover:before {
+	bottom: 94%;
+}
+div.top.banner strong {
+	font-style: italic;
+	color: rgb(189, 93, 93);
+}
+
+div.journal {
+	margin: 3em auto;
+	width: 50%;
+}
+
+figure {
+	margin-left: 0px;
+	padding-left: 1em;
+	padding-top: .5em;
+	margin-bottom: 0px;
+}
+
+figcaption {
+	color: #999;
+	font-family: "ProximaNova", "freight-sans-pro", Helvetica, Arial, sans-serif;
+	font-size: 1.2em;
+	font-style: italic;
+	margin: .5em auto 1em;
+	margin-top: 0px;
+	padding-left: 1em;
+}
+
+.left-border {
+	border-left: .5em solid rgba(202, 202, 202, 0.36);
+}
+
+@media screen and (max-device-width: 1224px) {
+	p {
+		font-size: 3em;
+	}
+	div.journal {
+		width: 90% !important;
+	}
+	.persistent-nav {
+		display: none;
+	}
+
+	h2 {
+		font-size: 3.5em !important;
+		background: rgba(218, 193, 193, 0.84);
+	}
+}
+
+
+/*
+	rgba(218, 193, 193, 0.84) - Cool faded maroon
+	rgba(78, 68, 56, 0.89) - Light (dark) brown for text
+	#cf8b5e - The rust orange used by soundcloud embed
+
+	Cool Upstream Color-esque theme:
+	"proxima-nova", "Helvetica Neue", Helvetica, arial, sans-serif
+	;
+*/

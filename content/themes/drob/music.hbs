@@ -1,0 +1,41 @@
+{{!< default}}
+
+<main class="content" role="main">
+	<div class="controls">
+		<input type="button" id="play" value="Play"/>
+		<input type="button" id="pause" value="Pause" />
+		<input type="button" id="previous" value="Previous"/>
+		<input type="button" id="next" value="Next"/>
+	</div>
+</main>
+
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		//initialize the sounds to play in succession, eventually bind controls.
+		tracks = [];
+		tracks[0] = new Howl({
+			urls: ['{{asset "static_files/01 Portrait Of A Man Whose Emotions Change The Weather.mp3"}}'],
+		})
+
+		tracks[1] = new Howl({
+			urls: ['{{asset "static_files/02 Hipster Sweaters On Film.mp3"}}'],
+			autoplay: true,
+		});
+
+		tracks[2] = new Howl({
+			urls: ['{{asset "static_files/03 An Orchids Bloom.mp3"}}'],
+		});
+
+		tracks[3] = new Howl({
+			urls: ['{{asset "static_files/04 Reaching Towards Discordia.mp3"}}']
+		});
+
+	});
+</script>
+<script type="text/javascript" src="{{ asset "js/howler.min.js"}}"></script>
+<script type="text/javascript" src="{{ asset "js/hipster_sweaters.js"}}"></script>
+
+<link href='http://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="{{asset "css/hipster_sweaters.css"}}" />
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />

@@ -1,0 +1,376 @@
+/*! normalize.css v2.1.3 | MIT License | git.io/normalize */
+
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+    display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+
+audio,
+canvas,
+video {
+    display: inline-block;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+
+[hidden],
+template {
+    display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+ /*
+
+  colors: #E7DEE5,E9ECEC,DBDBDB,F2F2F2,B9B7BD,C85B5C,F1E6E0,;
+*/
+html {
+    font-family: sans-serif; /* 1 */
+    -ms-text-size-adjust: 100%; /* 2 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+html, body {
+  margin: 0;
+}
+
+body {
+  margin: 0 !important;
+}
+
+html {
+  background: #E9ECEC;
+  background-attachment: fixed;
+}
+
+time {
+  color: #666665;
+  font-family: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.thin-font {
+  font: 400 50px/52px "freight-sans-pro", Helvetica, Arial, Sans-Serif;
+}
+
+
+@media screen and (max-device-width: 1224px) {
+  p {
+    font-size: 1.3em;
+  }
+}
+
+.splash.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: white; /* placeholder while the image loads */
+  /*display: -webkit-box;*/
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+
+}
+
+div.top.banner {
+  font-family: acta-display, Georgia, Times, serif;
+  margin: 0 auto;
+  -webkit-font-smoothing: antialiased;
+  width: 50%;
+  position: relative;
+  top: 30%;
+}
+
+.about {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  top: 35%;
+}
+
+.about > p {
+  font-size: 1.5em;
+  color: rgba(60, 60, 60, 0.88);
+  font-style: italic;
+}
+
+
+div.main.container {
+  background: rgba(255, 255, 255, 0.43);
+}
+
+
+
+/********************************
+  Headers styles. Includes styles
+  for the SubHeader component
+*/
+
+  h2 i {
+    float: left !important;
+    color: rgb(189, 93, 93) !important;
+  }
+
+  h2.title {
+    /*font-family: acta-display, Georgia, Times, serif;*/
+    font-family:"freight-sans-pro", Helvetica, Arial, Sans-Serif;
+    font-size: 3em;
+    color: #333;
+    font-weight: normal;
+    text-align: center;
+  }
+
+  h2.header {
+    color: rgb(82, 77, 77) !important;
+    font-family: "freight-sans-pro", Helvetica, Arial, Sans-Serif !important;
+    font-weight: 400;
+    font-size: 1.7em;
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
+
+  .title-wrapper {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .title-wrapper h2.title {
+    margin: 0;
+    padding: 1em;
+    background-color: rgba(243, 184, 95, 0.54);
+  }
+
+
+
+
+div.quote {
+  padding-left: 15px;
+}
+
+  div.quote > p {
+    font-style: italic;
+    color: #747171;
+  }
+
+div.outer {
+  clear: both;
+  padding-bottom: 30px;
+  margin-bottom: 100px;
+}
+
+  div.outer.shadow {
+    -webkit-box-shadow: 0px 5px 9px 0px rgba(50, 50, 50, 0.63);
+    -moz-box-shadow:    0px 5px 9px 0px rgba(50, 50, 50, 0.63);
+    box-shadow:         0px 5px 9px 0px rgba(50, 50, 50, 0.63);
+  }
+
+  div.outer h2 {
+    padding-top: 1em;
+    padding-bottom: 0px;
+    margin: 0;
+  }
+
+  div.outer:last {
+    -webkit-box-shadow: none;
+    -moz-box-shadow:    none;
+    box-shadow:         none;
+  }
+.embed.unloaded {
+  width: 100%;
+  height: 30px;
+  background: white;
+}
+
+.italic {
+  font-style: italic;
+  color: rgb(119, 118, 117);
+}
+
+.emphasis {
+  color: rgb(189, 93, 93);
+}
+
+.hugging {
+  margin-top: -3%;
+}
+
+.inline.aside {
+  margin: 0 auto;
+  width: 80%;
+  font-size: 2em;
+  color: #333;
+}
+
+p > a {
+  color: #cf8b5e;
+  text-decoration: none;
+  border-bottom: 1px dotted #cf8b5e;
+  position: relative;
+  display: inline-block;
+}
+
+p > a:hover{
+  color: orange;
+  border-bottom: 1px dotted orange;
+}
+
+span.info {
+  display: inline-block;
+  position: relative;
+  text-shadow: 0 1px 6px rgba(255, 255, 255, 0.81);
+  border-bottom: 1px dotted #F3C3A3;
+}
+
+.lamp span.info  {
+  color: rgb(211, 209, 161);
+}
+
+span.info:before {
+  content: "";
+  width: 0;
+  height: 0;
+  bottom: 85%;
+  border-top: 20px solid rgba(230, 236, 197, 0.95);
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+}
+
+span.info:after, span.info:before {
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  transition: 0.3s ease;
+
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  visibility: none;
+  position: absolute;
+}
+span.info:after {
+  content: attr(data-info);
+  bottom: 100%;
+  left: -2em;
+  white-space: nowrap;
+  font-size: .7em;
+  background-color: rgba(230, 236, 197, 0.95);
+  padding: 5px 15px;
+  color: black;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+span.info:hover:before,span.info:hover:after {
+  opacity: 1;
+}
+
+strong {
+  font-style: italic;
+  color: rgb(189, 93, 93);
+}
+
+div.journal {
+  margin: 3em auto;
+  width: 50%;
+}
+
+figure {
+  margin-left: 0px;
+  padding-left: 1em;
+  padding-top: .5em;
+  margin-bottom: 0px;
+}
+
+figcaption {
+  color: #999;
+  font-family: "ProximaNova", "freight-sans-pro", Helvetica, Arial, sans-serif;
+  font-size: 1.2em;
+  font-style: italic;
+  margin: .5em auto 1em;
+  margin-top: 0px;
+  padding-left: 1em;
+}
+
+.left-border {
+  border-left: .5em solid rgba(202, 202, 202, 0.36);
+}
+
+@media screen and (max-device-width: 1224px) {
+  p {
+    font-size: 3em;
+  }
+  div.journal {
+    width: 90% !important;
+  }
+  .persistent-nav {
+    display: none;
+  }
+
+  h2 {
+    font-size: 3.5em !important;
+    background: rgba(218, 193, 193, 0.84);
+  }
+}
+
+
+/*
+  rgba(218, 193, 193, 0.84) - Cool faded maroon
+  rgba(78, 68, 56, 0.89) - Light (dark) brown for text
+  #cf8b5e - The rust orange used by soundcloud embed
+
+  Cool Upstream Color-esque theme:
+  "proxima-nova", "Helvetica Neue", Helvetica, arial, sans-serif
+  ;
+*/
