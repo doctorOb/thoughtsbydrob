@@ -19,13 +19,14 @@
 	//Fade the title in and out when the user is writing enough words for scrolling to happen
 	function bind_scroll_handler() {
 		var title = $('.title');
+		var sidemenu = $('#side-menu');
 		$(window).scroll(function(){
 			var scrY = document.body.scrollTop;
 			if (scrY < 20) {
 				title.removeClass('hidden');
 			}
 
-			if (scrY > 20) {
+			if (scrY > 20 && !sidemenu.hasClass('open')) {
 				title.addClass('hidden');
 			}
 		});
@@ -61,6 +62,8 @@
 				overlay.addEventListener(eventtype, closeClickFn);
 			}
 		});
+
+		$('#post-title').appendTo(menu);
 
 	}
 
