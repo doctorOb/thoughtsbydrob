@@ -25,11 +25,10 @@
 
 		if ($('.content .post').length) {
 			//cant cache the end until images load
-			var end = $('.post-content p:last-child').offset().top;
+			var end = $('.post-content p').last();
 			var bar = title.find('.progress');
 			progressFcn = function(scrY) {
-				var end = $('.post-content p:last-child').offset().top;
-				var progress = Math.max(0,(scrY / end)) * 100;
+				var progress = Math.max(0,(scrY / end.offset().top)) * 100;
 				if (progress > 100) {
 					progress = 100;
 				}
