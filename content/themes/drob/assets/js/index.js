@@ -17,18 +17,34 @@
 		return check;
 	}
 	//Fade the title in and out when the user is writing enough words for scrolling to happen
+	//if the page is a post, bind the progress bar updater as well
 	function bind_scroll_handler() {
 		var title = $('.title');
 		var sidemenu = $('#side-menu');
+		var progressFcn = $.noop;
+
+		if ($('.content .post').length) {
+			var end = $('.post-content p:last-child').offset().top;
+			var bar = title.find('.progress');
+			progressFcn = function(scrY) {
+				var progress = Math.max(0,(scrY / end)) * 100;
+				if (progress > 100) {
+					progress = 100;
+				}
+				bar.width(progress + '%');
+			}
+		}
 		$(window).scroll(function(){
 			var scrY = document.body.scrollTop;
 			if (scrY < 20) {
-				title.removeClass('hidden');
+				title.removeClass('title-hidden');
 			}
 
 			if (scrY > 20 && !sidemenu.hasClass('open')) {
-				title.addClass('hidden');
+				title.addClass('title-hidden');
 			}
+
+			progressFcn(scrY);
 		});
 	}
 
@@ -40,7 +56,7 @@
 			resetMenu = function() {
 				menu.removeClass('open').addClass('close');
 				if (document.body.scrollTop > 20) {
-					$('.title').addClass('hidden');
+					$('.title').addClass('title-hidden');
 				}
 			},
 			closeClickFn = function (e) {
@@ -58,13 +74,23 @@
 				resetMenu();
 			} else {
 				menu.removeClass('close').addClass('open');
-				$('.title').removeClass('hidden');
+				$('.title').removeClass('title-hidden');
 				overlay.addEventListener(eventtype, closeClickFn);
 			}
 		});
 
 		$('#post-title').appendTo(menu);
 
+	}
+
+
+	function bindProgressBar() {
+
+		var bar = 
+
+		$(window).onscroll(function(){
+			console.log(this.offsetTop);
+		});
 	}
 
 	/* MAIN */

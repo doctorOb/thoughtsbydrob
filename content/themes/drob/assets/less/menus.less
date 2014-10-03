@@ -217,8 +217,25 @@
 	-webkit-transition: opacity 0.3s;
 
 
-	&.hidden {
-		opacity: 0;
+	.progress {
+		content: "";
+		position: absolute;
+		top: -.4em; //negative border height of title
+		left: 0;
+		width: 0%;
+		height: .4em;
+		background: wheat;
+	}
+
+
+	&.title-hidden {
+
+		opacity: .3;
+		.name,
+		.post-meta {
+			opacity: 0;
+			display: none;
+		}
 	}
 	span.motto {
 		

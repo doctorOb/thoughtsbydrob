@@ -4,6 +4,7 @@
     the {body} of the default.hbs template, which contains our header/footer. }}
 
 <div class="title" id="post-title">
+    <div class="progress"></div>
     <span class="name">{{#post}}{{{title}}}{{/post}}</span>
     <span class="post-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time> {{tags prefix="on " separator=" | "}}</span>
 </div>
