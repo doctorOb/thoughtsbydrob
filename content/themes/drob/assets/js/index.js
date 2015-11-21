@@ -53,9 +53,11 @@
 
 		var menu = $('#side-menu'),
 			trigger = menu.find('.menu-trigger').get(0),
+			body = $('body'),
 			eventtype = mobilecheck() ? 'touchstart' : 'click',
 			resetMenu = function() {
 				menu.removeClass('open').addClass('close');
+				body.removeClass('menu-open');
 				if (document.body.scrollTop > 20) {
 					$('.title').addClass('title-hidden');
 				}
@@ -75,6 +77,7 @@
 				resetMenu();
 			} else {
 				menu.removeClass('close').addClass('open');
+				body.addClass("menu-open");
 				$('.title').removeClass('title-hidden');
 				overlay.addEventListener(eventtype, closeClickFn);
 			}

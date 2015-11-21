@@ -404,12 +404,12 @@ margin on the iframe, cause it breaks stuff. */
     width: 100%;
     min-height: 100%;
     z-index: -2;
-    opacity: .2;
+    opacity: .1;
 }
 
 .tree.overlay {
-    background-image: url('patterns/transparent.png');
-    background-size: 40%;
+    background-image: url('images/fractal.jpg');
+    background-size: 100%;
     background-position-x: 100%;
     background-position-y: 100%;
     float:right;
@@ -424,15 +424,12 @@ margin on the iframe, cause it breaks stuff. */
     position: relative;
     display: table;
     width: 100%;
-    height: 8em;
     margin-bottom: 5rem;
     text-align: center;
     color: #fff;
     background-size: cover;
     background-position: 50;
-    border-bottom: 5px solid rgba(204, 198, 186, 0.24);
-
-    background: white;
+    border-bottom: 5px solid #4E4E4E;
 }
 
 .blog-logo {
@@ -454,14 +451,12 @@ margin on the iframe, cause it breaks stuff. */
     font-size: 5rem;
     letter-spacing: -1px;
     font-weight: bold;
-    font-family: 'Lato', sans-serif;
+    font-family: @caslon;
     text-shadow: 0 1px 6px rgba(255, 255, 255, 0.81);
     color: rgba(44, 44, 44, 1);
     /*font: 400 16px/20px "freight-sans-pro", Helvetica, Arial, Sans-Serif;*/
-    font: "Avenir", "proxima-nova", "Helvetica Neue", Helvetica, arial, sans-serif;
     font-weight: 100;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
+    letter-spacing: 0.2em;
     display: block;
     width: 100%;
 }
@@ -510,31 +505,12 @@ margin on the iframe, cause it breaks stuff. */
     min-height: 100%;
     margin: 0 auto;
     padding-bottom: 4rem;
-    border-bottom: #EBF2F6 1px solid;
     word-break: break-word;
     hyphens: auto;
     /*background: rgba(255, 255, 255, 0.43);*/
     padding: 1em;
 }
 
-/* Add a little circle in the middle of the border-bottom on our .post
-   just for the lolz and stylepoints. */
-.post:after {
-    display: block;
-    content: "";
-    width: 7px;
-    height: 7px;
-    border: #E7EEF2 1px solid;
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    margin-left: -5px;
-    background: #fff;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    border-radius: 100%;
-    box-shadow: #fff 0 0 0 5px;
-}
 
 .post-title {
     margin:0;
@@ -664,7 +640,6 @@ margin on the iframe, cause it breaks stuff. */
     position: relative;
     margin: 4rem 0 0 0;
     padding: 4rem 0 0 0;
-    border-top: #EBF2F6 1px solid;
 
     h4 {
         font-size: 1.8rem;
@@ -784,13 +759,13 @@ margin on the iframe, cause it breaks stuff. */
     position: relative;
     margin: 15rem 0 0 0;
     padding: 4rem 0;
-    border-top: #EBF2F6 1px solid;
+    border-top: 1px solid;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.3rem;
     line-height: 1.7em;
-    color: black;
+    color: #4E4E4E;
     text-align: center;
-    background: rgba(204, 204, 187, 0.57);
+    background: rgba(250, 250, 250, 0.72);
 }
 
 .site-footer a {
@@ -1043,7 +1018,6 @@ margin on the iframe, cause it breaks stuff. */
     .post-footer .author {
         margin: 0 0 2rem 0;
         padding: 0 0 1.6rem 0;
-        border-bottom: #EBF2F6 1px dashed;
     }
 
     .post-footer .share {
@@ -1240,15 +1214,15 @@ div.outer {
 }
 
 p > a {
-  color: #9C9B98;
+  color: @blue;
   text-decoration: none;
-  border-bottom: 1px dotted #B6A194;
+  border-bottom: 1px dotted rgba(0,0,0,0);
   position: relative;
   display: inline-block;
 }
 
 p > a:hover{
-  color: orange;
+  color: @darkBlue;
   border-bottom: 1px dotted orange;
 }
 
